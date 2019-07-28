@@ -30,6 +30,7 @@
           <td><a href="https://github.com/Arza-3d/UE4-StealthGame_note">github.com/Arza-3d/UE4-StealthGame_note</a></td>
         </tr>
       </table>
+      <p>This project doc will be splitted into 2 projects</p>
   </header>
   <main class="aside-nav-target-r3">
 
@@ -96,6 +97,7 @@
           </div>
 
           <p>after making the base C++ class, then make the blueprint class derived from that, name it <code>BP_Objective</code></p>
+
         </section>
 
 
@@ -169,12 +171,30 @@
              </div>
           </div>
           <hr>
-          <p>Printstring in event tick that <code>bIsCarryingObjective</code>, you can make duration in print string to 0, cos it is event tick.</p>
+          <p>Inside <code>BP_Player</code> printstring in event tick that <code>IsCarryingObjective</code>, you can make duration in print string to 0, cos it is event tick.</p>
+          <iframe src="https://blueprintue.com/render/n2ohhkcl"></iframe>
         </section>
 
         <h3>setup objective UI with UMG</h3>
         <section>
-          <p>added a widget to show wether objective is taken or not.</p>
+          <code>
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/UI/WBP_ObjectiveInfo.uasset">WBP_ObjectiveInfo</a>
+          </code>
+          +
+          <code>
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/Blueprints/BP_HUD.uasset">BP_HUD</a>
+          </code>
+          <hr>
+          <ol>
+            <li>Create widget name it <code>WBP_ObjectiveInfo</code>, add text and bind that to <code>IsCarryingObjective</code>
+              <iframe src="https://blueprintue.com/render/42ckew7b" scrolling="no" allowfullscreen></iframe>
+            </li>
+            <li>Create a HUD, derived it from <code>FPSHUD</code> name it <code>BP_HUD</code>, then this
+              <iframe src="https://blueprintue.com/render/oc39zsrs"></iframe>
+            </li>
+            <li>Create gamemode, derive it from <code>FPSGameMode</code>, name it <code>BP_GameMode</code>, added that HUD in the list</li>
+          </ol>
+
 
         </section>
 
