@@ -194,8 +194,7 @@
             </li>
             <li>Create gamemode, derive it from <code>FPSGameMode</code>, name it <code>BP_GameMode</code>, added that HUD in the list</li>
           </ol>
-
-
+          <p>You can put this C++ class directly inside the map.</p>
         </section>
 
         <h3>create blackhole</h3>
@@ -207,7 +206,7 @@
 
         <h3>create extraction zone</h3>
         <section>
-
+          <p>Inside <code>FPSExtractionZone</code> add decal component:</p>
           <div class="tab-r3">
               <nav>
                <a>FPSExtractionZone.h</a>
@@ -225,6 +224,12 @@
                </div>
              </div>
           </div>
+
+          <ul>
+            <li>Create BP class derived from <code>FPSExtractionZone</code> and call it <code>BP_ExtractionZone</code>.</li>
+            <li>Apply the decal material that is provided.</li>
+            <li>Change the material instance and the material to make it more visible.</li>
+          </ul>
 
         </section>
 
