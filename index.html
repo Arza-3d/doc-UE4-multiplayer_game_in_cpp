@@ -256,16 +256,57 @@
 
         <h3>setup mission end</h3>
         <section>
-          <ol>
-            <li>Inside <code>FPSExtractionZone</code> do something when player overlaped</li>
-            <li>Let the gamemode do the next thing</li>
-          </ol>
+          <p>Need to end the mission after player got the objective and get to the extraction zone</p>
+          <p>Inside <code>FPSGameMode</code> add a function and an event that will handle this</p>
+          <div class="tab-r3">
+              <nav>
+               <a>FPSGameMode.h</a>
+               <span>+</span>
+               <a>FPSGameMode.cpp</a>
+             </nav>
+             <div>
+               <div>
+                 <p>class member declaration:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.18/Source/FPSGame/Public/FPSGameMode.h"></script>
+               </div>
+               <div>
+                 <p>class functionality:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.18/Source/FPSGame/Private/FPSGameMode.cpp"></script>
+               </div>
+             </div>
+          </div>
+          <hr>
+          <p>In <code>FPSExtractionZone.cpp</code> we make function that will call the function that just created in the game mode</p>
+          <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.18/Source/FPSGame/Private/FPSExtractionZone.cpp"></script>
+
+
 
         </section>
 
         <h3>add extraction feedback</h3>
         <section>
+          <p>Add text if mission complete throu <code>FPSGameMode</code> and new widget.</p>
 
+          <hr>
+
+          <p>If player enter extraction zone without the objective, it plays the failed compile sound.</p>
+          <div class="tab-r3">
+              <nav>
+               <a>FPSExtractionZone.h</a>
+               <span>+</span>
+               <a>FPSExtractionZone.cpp</a>
+             </nav>
+             <div>
+               <div>
+                 <p>class member declaration:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.19/Source/FPSGame/Public/FPSExtractionZone.h"></script>
+               </div>
+               <div>
+                 <p>class functionality:</p>
+                 <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.19/Source/FPSGame/Private/FPSExtractionZone.cpp"></script>
+               </div>
+             </div>
+          </div>
         </section>
 
         <h3>set post mission camera</h3>
