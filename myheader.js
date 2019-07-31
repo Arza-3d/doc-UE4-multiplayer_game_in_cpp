@@ -15,7 +15,7 @@ $('header').html(`<h1>multiplayer in C++</h1>
   <p>This is just bunch of notes on training C++ in UE4. Project doc will be splitted into 2 projects</p>
 
   <ol>
-    <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/index.html">setup</a></li>
+    <li><a href="https://arza-3d.github.io/doc-UE4_multiplayer_game_in_cpp/">setup</a></li>
     <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/playersetup.html">player setup</a></li>
     <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/gamemoderules.html">game mode rules</a></li>
     <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/aiguards.html">AI guards</a></li>
