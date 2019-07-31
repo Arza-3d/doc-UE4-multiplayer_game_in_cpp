@@ -53,7 +53,7 @@
 
         <h3>setup sight sense</h3>
         <section>
-          <p>Got problem during this, code is right but still not working, turn out it worked after I close the VS and start the UE4</p>
+
           <div class="tab-r3">
               <nav>
                <a>FPSAIGuard.h</a>
@@ -71,6 +71,7 @@
                </div>
              </div>
           </div>
+          <p>Got problem during this, code is right but still not working, turn out it worked after I close the VS and start the UE4, probably just forgot to build.</p>
         </section>
 
         <h3>setup hearing sense</h3>
@@ -95,7 +96,7 @@
              </div>
           </div>
           <hr>
-          <p>Setup make noise ability on player</p>
+          <p>Setup make <b>noise emitter component</b> on player</p>
           <div class="tab-r3">
               <nav>
                <a>FPSCharacter.h</a>
@@ -113,7 +114,11 @@
                </div>
              </div>
           </div>
-          <p>Debug it in BP:</p>
+          <hr>
+          <p>Debug it Inside
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.25/Content/Blueprints/BP_Player.uasset"><code>BP_Player</code></a>
+            :
+          </p>
           <iframe src="https://blueprintue.com/render/7d6pmlx5"></iframe>
         </section>
 
@@ -170,21 +175,45 @@
              </div>
           </div>
           <hr>
-          <p>Update the modified function in extraction zone</p>
+          <p>Update the modified function in <code>FPSExtractionZone</code></p>
           <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.28/Source/FPSGame/Private/FPSExtractionZone.cpp"></script>
           <hr>
-          <p>Add the function call mission failed to GuardAI</p>
+          <p>Add the function call mission failed to <code>FPSAIGuard</code></p>
           <script src="https://gist-it.appspot.com/https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.28/Source/FPSGame/Private/FPSAIGuard.cpp"></script>
           <hr>
-          <p>Event in gamemode:</p>
+          <ol>
+            <li>Create a widget name it
+              <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.25/Content/UI/WBP_GameOver.uasset">
+                <code>WBP_GameOver</code>
+              </a>
+            </li>
+            <li>add bool name it <code>bMissionSuccess</code>, expose it on spawn</li>
+            <li>Put a text, make it editable, and put this in event construct
+              <iframe src="https://blueprintue.com/render/pf0ix7ss"></iframe>
+            </li>
+          </ol>
+          <hr>
+
+          <p>Event in
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.28/Content/Blueprints/BP_GameMode.uasset"><code>BP_GameMode</code></a>
+          </p>
           <iframe src="https://blueprintue.com/render/_a_zvblf"></iframe>
           <hr>
-          <p>the widget event:</p>
-          <iframe src="https://blueprintue.com/render/pf0ix7ss"></iframe>
         </section>
 
         <h3>add 3d UI state above guard</h3>
         <section>
+
+            <ol>
+              <li>Create new widget, name it <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.29/Content/UI/WBP_GuardState.uasset"><code>WBP_GuardState</code></a></li>
+              <li>add textblock in it, change color to yellow, make this text editable</li>
+              <li>make function to update this text, name it <code>UpdateText()</code>
+                <iframe src="https://blueprintue.com/render/98j391uh"></iframe>
+              </li>
+            </ol>
+
+          <hr>
+          <p>Inside <code>FPSAIGuard</code>, make enum that represent guard state, and make new event <code>OnStateChanged()</code></p>
           <div class="tab-r3">
               <nav>
                <a>FPSAIGuard.h</a>
@@ -203,10 +232,15 @@
              </div>
           </div>
           <hr>
-          <p>Update gurad state during state changed event</p>
-          <iframe src="https://blueprintue.com/render/o577zk5m"></iframe>
-          <hr>
-          <iframe src="https://blueprintue.com/render/98j391uh"></iframe>
+          <ol>
+            <li>Inside <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/4.29/Content/Blueprints/BP_Guard.uasset"><code>BP_Guard</code></a>
+              add new <b>widget component</b>, pick a class <code>WBP_GuardState</code>.
+            </li>
+            <li>put this right above the guard</li>
+            <li>Use the new event to change widget inside
+              <iframe src="https://blueprintue.com/render/o577zk5m"></iframe>
+            </li>
+          </ol>
         </section>
 
         <h3>setup AI guard patrol</h3>
