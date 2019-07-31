@@ -118,24 +118,23 @@
 
         <h3>setup objective UI with UMG</h3>
         <section>
-          <code>
-            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/UI/WBP_ObjectiveInfo.uasset">WBP_ObjectiveInfo</a>
-          </code>
-          +
-          <code>
-            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/Blueprints/BP_HUD.uasset">BP_HUD</a>
-          </code>
+          <p>Create widget name it
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/UI/WBP_ObjectiveInfo.uasset"><code>WBP_ObjectiveInfo</code></a>
+            , add text and bind that to <code>IsCarryingObjective</code>
+          </p>
+          <iframe src="https://blueprintue.com/render/42ckew7b"></iframe>
           <hr>
-          <ol>
-            <li>Create widget name it <code>WBP_ObjectiveInfo</code>, add text and bind that to <code>IsCarryingObjective</code>
-              <iframe src="https://blueprintue.com/render/42ckew7b" scrolling="no" allowfullscreen></iframe>
-            </li>
-            <li>Create a HUD, derived it from <code>FPSHUD</code> name it <code>BP_HUD</code>, then this
-              <iframe src="https://blueprintue.com/render/oc39zsrs"></iframe>
-            </li>
-            <li>Create gamemode, derive it from <code>FPSGameMode</code>, name it <code>BP_GameMode</code>, added that HUD in the list</li>
-          </ol>
-          <p>You can put this C++ class directly inside the map.</p>
+          <p>
+            Create a HUD, derived it from <code>FPSHUD</code> name it
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/Blueprints/BP_HUD.uasset"><code>BP_HUD</code></a>
+            , then this:
+          </p>
+          <iframe src="https://blueprintue.com/render/oc39zsrs"></iframe>
+          <hr>
+          <p>Create gamemode, derive it from <code>FPSGameMode</code>, name it
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/master/Content/Blueprints/BP_GameMode.uasset"><code>BP_HUD</code></a>,
+            added that HUD in the list.
+          </p>
         </section>
 
         <h3>create blackhole</h3>

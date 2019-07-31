@@ -107,7 +107,7 @@
         <h3>add extraction feedback</h3>
         <section>
           <p>Add text if mission complete throu <code>FPSGameMode</code> and new widget.</p>
-
+          <iframe src="https://blueprintue.com/render/442bnaij"></iframe>
           <hr>
 
           <p>If player enter extraction zone without the objective, it plays the failed compile sound.</p>
@@ -132,9 +132,22 @@
 
         <h3>set post mission camera</h3>
         <section>
-          <p>create a spectator actor name it <code>BP_SpectatingViewpont</code>, add matinee camera, than can move camera from <code>BP_Gameplay</code></p>
-          <iframe src="https://blueprintue.com/render/s5kwev3b"></iframe>
+          <ol>
+            <li>Create actor, name it
+              <code><a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.20/Content/Blueprints/BP_SpectatingViewpoint.uasset">BP_SpectatingViewpont</code></a>
+            </li>
+            <li>add matinee camera as component</li>
+            <li>pilot this actor and put it the way u like it</li>
+          </ol>
           <hr>
+          <p>Inside
+            <a href="https://github.com/Arza-3d/UE4-StealthGame_note/blob/3.20/Content/Blueprints/BP_GameMode.uasset"><code>BP_GameMode</code></a>
+            create this node
+          </p>
+          <iframe src="https://blueprintue.com/render/s5kwev3b"></iframe>
+          <p>disconnect the new added node after you tested it...</p>
+          <hr>
+          <p>...alternatively we can put all that function inside C++ instead of inside blueprint:</p>
           <div class="tab-r3">
               <nav>
                <a>FPSGameMode.h</a>
