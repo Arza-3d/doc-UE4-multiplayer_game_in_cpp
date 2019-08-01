@@ -21,8 +21,7 @@ $('header').html(`<h1>multiplayer in C++</h1>
   <ul>
     <li>First peoject:
       <ol>
-        <li><a href="https://arza-3d.github.io/doc-UE4_multiplayer_game_in_cpp/">setup</a></li>
-        <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/playersetup.html">player setup</a></li>
+        <li><a href="https://arza-3d.github.io/doc-UE4_multiplayer_game_in_cpp/">player setup</a></li>
         <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/gamemoderules.html">game mode rules</a></li>
         <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/aiguards.html">AI guards</a></li>
         <li><a href="https://raw.githack.com/Arza-3d/doc-UE4_multiplayer_game_in_cpp/master/multiplayersupport.html">multiplayer support</a></li>
